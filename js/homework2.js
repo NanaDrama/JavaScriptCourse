@@ -25,7 +25,7 @@ console.log(res4);
 console.log(typeof res4); 
 
 /* task 3 */
-let isAdult = prompt('Якщо ви повнолітні натисніть ОК');
+let isAdult = prompt('Скільки вам років?');
 if( isAdult >= 18){
     alert('Ви досягли повноліття')
 }else{
@@ -33,6 +33,35 @@ if( isAdult >= 18){
 }
 
 /* task 4 */
+let arr = [4, 5, 2, 1, 6, 5, 3, 5, 2, 5];
+const count = {};
+let data;
+let max = 0;
+
+for (let i = 0; i < arr.length; i++) {
+  let number = arr[i];
+  if (count[number] === undefined) {
+    count[number] = 1;
+  } else {
+    count[number]++;
+  }
+
+  if (count[number] > max) {
+    max = count[number];
+    data = number;
+  }
+}
+
+console.log(data); // виведе 5
+
+for (let i = arr.length - 1; i >= 0; i--) {
+  if (arr[i] === data) {
+    arr.splice(i, 1);
+  }
+}
+
+console.log(arr);
+
 /* task 5 */
 let ta = prompt('Введіть довжину сторони a');
 let tb = prompt('Введіть довжину сторони b');
