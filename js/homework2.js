@@ -52,7 +52,7 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-console.log(data); // виведе 5
+console.log(data); // виведе 
 
 for (let i = arr.length - 1; i >= 0; i--) {
   if (arr[i] === data) {
