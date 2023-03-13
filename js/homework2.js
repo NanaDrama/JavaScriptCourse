@@ -2,9 +2,9 @@
 let a;
 let b;
 let c;
-if( a < b & b < c){
-    console.log('Вираз правильний');
-}else{
+if( a < b && b < c){
+    консоль . log ( 'Вираз правильний' );
+} ще {
     console.log('Вираз неправильний')
 }
 
