@@ -4,7 +4,7 @@ let b;
 let c;
 if( a < b && b < c){
     консоль . log ( 'Вираз правильний' );
-} ще {
+} else {
     console.log('Вираз неправильний')
 }
 
@@ -20,7 +20,7 @@ console.log(typeof res2);
 let res3 = Boolean(x + y);
 console.log(res3);
 console.log(typeof res3);
-let res4 = Number('x') + Number('y');
+let res4 = (x-x)/(y-y);
 console.log(res4);
 console.log(typeof res4); 
 
@@ -66,22 +66,32 @@ console.log(arr);
 let ta = prompt('Введіть довжину сторони a');
 let tb = prompt('Введіть довжину сторони b');
 let tc = prompt('Введіть довжину сторони c');
-let p = (ta + tb + tc) / 2;
-let s = Math.sqrt(p * (p - ta) * (p - tb) * (p - tc));
-console.log('Площа трикутника: ' + s);
-if(ta ** 2 == tc ** 2 + tb ** 2 || tc ** 2 == ta ** 2 + tb ** 2 || tb ** 2 == ta ** 2 + tc ** 2){
-    console.log('Трикутник прямокутний');
-}else{
-    console.log('Трикутник не прямокутний')
+
+if( isNaN(ta) || isNaN(tb) || isNaN(tc) || ta <= 0 || tb <= 0 || tc <= 0 ){
+    console.log('Incorrect data');
+} else {
+    ta = Number(ta);
+    tb = Number(tb);
+    tc = Number(tc);
+    
+    let p = (ta + tb + tc) * 0.5;
+    let s = Math.sqrt(p * (p - ta) * (p - tb) * (p - tc));
+    console.log('Площа трикутника: ' + Math.floor(s*1000)/1000);
+    
+    if(ta ** 2 == tc ** 2 + tb ** 2 || tc ** 2 == ta ** 2 + tb ** 2 || tb ** 2 == ta ** 2 + tc ** 2){
+        console.log('Трикутник прямокутний');
+    } else {
+        console.log('Трикутник не прямокутний')
+    }
 }
 /* task 6 */
 const now = new Date();
 const hour  = now.getHours();
 if(hour >= 23 && hour <= 5){
     console.log('Доброї ночі')
-}if(hour > 5 && hour <= 11){
+}else if(hour > 5 && hour <= 11){
     console.log('Доброго ранку')
-}if(hour > 11 && hour <= 17){
+}else if(hour > 11 && hour <= 17){
     console.log('Доброго дня')
 }else{
     console.log('Доброго вечора')
