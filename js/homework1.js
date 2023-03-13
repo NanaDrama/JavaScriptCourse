@@ -2,7 +2,7 @@
 console.log('Kostrykova');
 
 /* task 3 */
-let apple = 4;
+const apple = 4;
 let tomato = 10;
 console.log('apple: ', apple, 'tomato: ', tomato);
 tomato = apple;
