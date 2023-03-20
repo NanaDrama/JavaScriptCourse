@@ -11,7 +11,7 @@ function compact(arr) {
     return result;
   }
   
-  const arr = [5, 3, 4, 5, 6, 7, 3];
+  let arr = [5, 3, 4, 5, 6, 7, 3];
   const arr2 = compact(arr);
   console.log(arr2); 
 /* task 2 */
@@ -50,11 +50,11 @@ function compact(arr) {
  let newRandArray = randArray(k);
  console.log(newRandArray);
 /* task 5 */
-function funcName(arr) {
-    let flatArr = arr.flat();
+function funcName(arr3) {
+    let flatArr = arr3.flat();
     let numArray = [];
     let stringArray = [];
-    for (let i = 0; i < arr.length; i += 1) {
+    for (let i = 0; i < arr3.length; i += 1) {
         let item = flatArr[i];
         if (typeof item === "number") {
             numArray.push(item);
@@ -67,8 +67,8 @@ function funcName(arr) {
     result.push(stringArray);
     return result;
 }
-let arr = [5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun"];
-console.log(funcName(arr));
+let arr3 = [5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun"];
+console.log(funcName(arr3));
 /* task 6 */
 let first = Number(prompt("Введіть число a"));
 let second = Number(prompt("Введіть число b"));
